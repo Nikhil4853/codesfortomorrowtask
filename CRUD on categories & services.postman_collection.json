@@ -1,0 +1,725 @@
+{
+	"info": {
+		"_postman_id": "2db01687-b4d9-426c-8da7-b2e630e8c5a8",
+		"name": "CRUD on categories & services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33765691"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "CREATE_CATEGORY",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"category_test_2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"category_test_2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"category"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-VYCeDpYlQkcoQqr3F8oOhIspVyo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Mar 2025 09:02:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"newCategory\": {\n        \"name\": \"category_test_2\",\n        \"_id\": \"67cc07a200c0d7ea7f33fdf5\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET CATEGORY",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"categories"
+							]
+						},
+						"description": "Generated from cURL: curl --location 'http://localhost:4000/category' \\\r\n--header 'authentication: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g' \\\r\n--data '{\r\n    \"name\":\"category_test_2\"\r\n}'"
+					},
+					"response": [
+						{
+							"name": "http://localhost:4000/category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7e-YWSPgoGTK+DyKg4xxCM6+rsaZOU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Mar 2025 09:04:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"67cc077a86d304f03b998d07\",\n        \"name\": \"test\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67cc07a200c0d7ea7f33fdf5\",\n        \"name\": \"category_test_2\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "PUT CATEGORY",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"update category 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/category/67cc077a86d304f03b998d07",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"67cc077a86d304f03b998d07"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "PUT CATEGORY",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"update category\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/category/67cc077a86d304f03b998d07",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"category",
+										"67cc077a86d304f03b998d07"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-ZmZRjvm8qjz75CFrCiKbl9PhRJ0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Mar 2025 09:06:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category updated.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/category/67cc07a200c0d7ea7f33fdf5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"67cc07a200c0d7ea7f33fdf5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:4000/category/67cc07a200c0d7ea7f33fdf5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"category",
+										"67cc07a200c0d7ea7f33fdf5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-RGgjtU/1fVd7y2FOErDknYE5rBU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Mar 2025 09:26:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"category deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "service",
+			"item": [
+				{
+					"name": "CREATE SERVICE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"service name\",\r\n    \"type\":\"Normal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/category/67cc0decb9e8b0ff548e6d84/service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"67cc0decb9e8b0ff548e6d84",
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SERVICES",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"service name\",\n    \"type\":\"Normal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/category/67cc0decb9e8b0ff548e6d84/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"67cc0decb9e8b0ff548e6d84",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE SERVICE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"service name\",\n    \"type\":\"Normal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/category/67cc0decb9e8b0ff548e6d84/service/67cc0df7b9e8b0ff548e6d87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"67cc0decb9e8b0ff548e6d84",
+								"service",
+								"67cc0df7b9e8b0ff548e6d87"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PRICE",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authentication",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"price\":\"3$\",\n    \"type\":[\"Hourly\", \"Weekly\"],\n    \"duration\":\"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/category/67cc0decb9e8b0ff548e6d84/service/67cc103c375e90c1d9505f2e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"67cc0decb9e8b0ff548e6d84",
+								"service",
+								"67cc103c375e90c1d9505f2e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update price response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authentication",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"price\":\"3$\",\n    \"type\":[\"Hourly\", \"Weekly\"],\n    \"duration\":\"2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/category/67cc0decb9e8b0ff548e6d84/service/67cc103c375e90c1d9505f2e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"category",
+										"67cc0decb9e8b0ff548e6d84",
+										"service",
+										"67cc103c375e90c1d9505f2e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-cZ/mlUhhL0/vcfB1EEWw3xb8MU4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Mar 2025 09:55:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"price option are updated.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "ADMIN LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wmail\": \"admin@codesfortomorrow.com\",\r\n    \"password\": \"Admin123!@#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"wmail\": \"admin@codesfortomorrow.com\",\r\n    \"password\": \"Admin123!@#\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8c-cCFZZP9kZRUCqMpx9N04uDG+Bwo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 08 Mar 2025 08:58:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDE0MjQzMzMsImV4cCI6MTc0MTQzNTEzM30.ynjae0FVXwfwgJ9Igazw5rBu5_JfNqHruYpTgx_HA4g\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
